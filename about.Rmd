@@ -1,0 +1,13 @@
+---
+title: "Resume"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+## Learn about me!
+
+Please check my resume attached below to learn about my academic and professional experience.
+
+<img src="./resume.jpg">
