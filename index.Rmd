@@ -8,6 +8,15 @@ output:
 
 ## Welcome to my website! 
 
-Here you can see my website created for Data Science homework 4. But before you doing that, please say "Hi" to my lovely guinea pig!! Her name is Bubble :)
+Here you can see my website created for Data Science homework 4. 
+
+From the navigation bar in the top right corner, you can check my resume to learn more about me; send me an email; or check my GitHub account!
+
+
+## Say HI to Bubble!
+
+Before you moving on, please say "Hi" to my lovely guinea pig!! Her name is Bubble :) Feel free to check with me if you wanna see more pictures of her!
 
 <img src="./bubble.jpeg" style="width:50%">
+
+
