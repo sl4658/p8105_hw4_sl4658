@@ -10,7 +10,7 @@ output:
 
 Here you can see my website created for Data Science homework 4. 
 
-From the navigation bar in the top right corner, you can check my resume to learn more about me; send me an email; or check my GitHub account!
+From the navigation bar in the top right corner, you can check my resume; send me an email; check my GitHub account or LinkedIn account if needed!
 
 
 ## Say HI to Bubble!
