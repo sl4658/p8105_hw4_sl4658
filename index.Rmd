@@ -1,0 +1,13 @@
+---
+title: "Simin Ling's website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+## Welcome to my website! 
+
+Here you can see my website created for Data Science homework 4. But before you doing that, please say "Hi" to my lovely guinea pig!! Her name is Bubble :)
+
+<img src="./bubble.jpeg" style="width:50%">
