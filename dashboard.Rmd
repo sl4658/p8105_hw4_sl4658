@@ -1,0 +1,62 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: scroll
+    source: embed
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+library(flexdashboard)
+```
+
+
+```{r}
+head(rest_inspec)
+
+dunkin_df = 
+  rest_inspec %>% 
+  filter(dba == c("DUNKIN DONUTS"))
+
+dunkin_df
+```
+
+## Plot 1 (barchart)
+```{r}
+dunkin_df %>% 
+  count(boro) %>% 
+  mutate(boro = fct_reorder(boro, n)) %>% 
+  plot_ly(x = ~boro, y = ~n, color = ~boro, type = "bar", colors = "viridis") %>%
+  layout(title = "Number of inspections on Dunkin Donuts in each borough", xaxis = list(title ="Borough"), yaxis = list(title="Number of inspection on Dunkin Donuts"))
+```
+
+
+## Plot 2 (boxplot)
+```{r}
+dunkin_df %>%
+  drop_na(score) %>%
+  group_by(boro) %>%
+  plot_ly(x = ~boro, y = ~score, type = "box", color = "viridis") %>%
+  layout(title = "Distribution of scores for Dunkin Donuts by borough", xaxis = list(title ="Borough"), yaxis = list(title="Score"))
+```
+
+
+## Plot 3 (Scatterplot)
+```{r}
+donuts_df =
+  rest_inspec %>% 
+  filter(cuisine_description == c("Donuts"))
+
+donuts_df %>%
+  plot_ly(x = ~grade_date, y = ~score, type = "scatter", mode = "markers", color = ~score)  %>%
+layout(title = "Distribution of scores for all Donuts stores across time", xaxis = list(title ="Grade Date"), yaxis = list(title="Score")) %>%
+layout(xaxis = list(range = as.POSIXct(c('2013-01-01', '2019-01-01'))))
+```
+
+
+
